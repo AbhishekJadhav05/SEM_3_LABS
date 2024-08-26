@@ -5,7 +5,7 @@ struct stack
 {
     char arr[MAX];
     int top;
-    
+        
 }stack;
 
 void push(char element){

@@ -16,9 +16,14 @@ public class nonPrinciple{
         for(int i =0;i<order;i++){
             for(int j=0;j<order;j++){
                 if(i !=j){
+                    System.out.print(matrix[i][j]+" ");
                     sum += matrix[i][j];
+                    }else{
+                        System.out.print("x ");
                     }
-                }   
+                    
+                }
+                System.out.println();   
             }
         System.out.println("sum of non diagonal elements : "+sum);
         scanner.close();

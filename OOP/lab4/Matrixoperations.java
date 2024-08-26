@@ -38,7 +38,7 @@ public class Matrixoperations {
             System.out.println("addition : ");
             for(int i=0;i<rows1;i++){
                 for(int j=0;j<cols1;j++){
-                    System.out.print(matrix1[i][j]);
+                    System.out.print(matrix1[i][j]+ " ");
                 }
                 System.out.println();
             }
@@ -54,7 +54,7 @@ public class Matrixoperations {
             System.out.println("multiplication : ");
             for(int i=0;i<rows1;i++){
                 for(int j=0;j<cols2;j++){
-                    System.out.print(result[i][j]);
+                    System.out.print(result[i][j] + " ");
                 }
                 System.out.println();
             }

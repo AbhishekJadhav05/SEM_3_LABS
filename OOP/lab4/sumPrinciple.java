@@ -13,9 +13,11 @@ public class sumPrinciple {
             }
         }
         int sum = 0;
+        System.out.println("the principle diagonal elements : ");
         for(int i =0;i<order;i++){
             for(int j=0;j<order;j++){
                 if(i == j){
+                    System.out.println(matrix[i][j]);
                     sum+=matrix[i][j];
                 }
             }
