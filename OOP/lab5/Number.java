@@ -1,4 +1,4 @@
-package Lab5;
+package lab5;
 
 import java.util.Scanner;
 
@@ -73,9 +73,9 @@ public class Number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter a number : ");
+        Integer num = scanner.nextInt();
         Number number = new Number();
-        number.setValue(153);
-        System.out.println(number.isArmStrong());
+        number.setValue(num);
         scanner.close();
     }
 }

@@ -1,17 +1,17 @@
-package Lab5;
+package lab5;
 
 import java.util.Scanner;
 
-public class time {
+public class test {
     int hour;
     int minute;
     int second;
-    time(){
+    test(){
         this.hour = 0;
         this.minute = 0;
         this.second = 0;
     }
-    time(int hour,int minute,int second){
+    test(int hour,int minute,int second){
         this.hour = hour;
         this. minute = minute;
         this.second = second;
