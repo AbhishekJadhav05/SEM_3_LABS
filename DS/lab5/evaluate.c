@@ -8,7 +8,7 @@ struct stack
         
 }stack;
 
-void push(char element){
+void push(int element){
     if(stack.top == MAX-1){
         printf("stack overflow");
         return;
