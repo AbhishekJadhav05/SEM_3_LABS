@@ -13,6 +13,7 @@ public class nonPrinciple{
         }
         
         int  sum =0;
+        System.out.println("non principle elements : ");
         for(int i =0;i<order;i++){
             for(int j=0;j<order;j++){
                 if(i !=j){

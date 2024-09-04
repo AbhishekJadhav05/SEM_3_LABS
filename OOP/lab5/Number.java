@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class Number {
     private double value;
 
-    Number(){
-        this.value = 0;
-    }
-    void setValue(double value){
+    Number(double value){
         this.value = value;
     }
     boolean isZero(){
@@ -36,12 +33,15 @@ public class Number {
         return false;
     }
     boolean isEven(){
-        if(this.value %2 !=0){
+        if(this.value %2 ==0){
             return true;
         }
         return false;
     }
     boolean isPrime(){
+        if(isNegative()){
+            return false;
+        }
         for(int i=0;i<this.value/2;i++){
             if(this.value%i == 0){
                 return false;
@@ -74,8 +74,15 @@ public class Number {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter a number : ");
         Integer num = scanner.nextInt();
-        Number number = new Number();
-        number.setValue(num);
+        Number number = new Number(num);
+        System.out.println("isZero isEven isOdd isPositive isNegative isPrime isArmstrong");
+        System.out.println(number.isZero() +" "+
+                            number.isEven() + " "+
+                            number.isOdd() + " "+
+                            number.isPositive()+ " "+
+                            number.isNegative()+ " "+
+                            number.isPrime()+ " "+
+                            number.isArmStrong());
         scanner.close();
     }
 }

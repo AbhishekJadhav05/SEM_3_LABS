@@ -14,7 +14,7 @@ public class box {
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("enter the dimensions of the box : ");
         box box = new box(scanner.nextDouble(),scanner.nextDouble(), scanner.nextDouble());
         System.out.println(box.volume());
         scanner.close();
