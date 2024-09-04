@@ -14,9 +14,9 @@ public class book {
     }
     void display(){
         System.out.println("the following is the information of the book : ");
-        System.out.println(this.title);
-        System.out.println(this.authorName);
-        System.out.println(this.edition);
+        System.out.println("title : "+this.title);
+        System.out.println("Author : "+this.authorName);
+        System.out.println("edition : "+this.edition);
     }
 
     public static void main(String[] args) {
@@ -42,7 +42,6 @@ public class book {
         for(int i=0;i<6;i++){
             if(choice.equals(book[i].authorName)){
                 book[i].display();
-                break;
             }
         }
     }
