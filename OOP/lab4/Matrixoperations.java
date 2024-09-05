@@ -38,9 +38,9 @@ public class Matrixoperations {
             System.out.println("addition : ");
             for(int i=0;i<rows1;i++){
                 for(int j=0;j<cols1;j++){
-                    System.out.print(matrix1[i][j]+ " ");
+                    System.out.print(result[i][j]+ " ");
                 }
-                System.out.println();
+                System.out.println();2
             }
         }
         if(cols1 == rows2){

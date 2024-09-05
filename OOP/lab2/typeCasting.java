@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class typeCasting {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter a integer : ");
+        System.out.println("enter an integer : ");
         int a = scanner.nextInt();
         System.out.println("enter a char : ");
         char b = scanner.next().charAt(0);

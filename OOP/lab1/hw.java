@@ -10,6 +10,5 @@ public class hw{
         System.out.println("area is : "+area);
         System.out.println("circumference : "+(2*(Length+Breath)));
         scanner.close();
-        System.out.println();
     }
 }

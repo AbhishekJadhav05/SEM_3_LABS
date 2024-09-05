@@ -8,7 +8,7 @@ public class MagicSquare{
         System.out.println("enter number of cols : ");
         int cols = scanner.nextInt();
         int[][] magicSquare = new int[rows][cols];
-        for(int i=0;i<rows;i++){
+        for(int i=0;i<rows;i++){ 
             for(int j=0;j<cols;j++){
                 System.out.println("enter element at "+i+ " "+j);
                 magicSquare[i][j] = scanner.nextInt();
