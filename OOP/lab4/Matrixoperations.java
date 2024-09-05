@@ -40,7 +40,7 @@ public class Matrixoperations {
                 for(int j=0;j<cols1;j++){
                     System.out.print(result[i][j]+ " ");
                 }
-                System.out.println();2
+                System.out.println();
             }
         }
         if(cols1 == rows2){
