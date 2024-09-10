@@ -14,7 +14,7 @@ int length = 0;
 void enque(int element){
     if(length == MAX){    
        printf("queue overflow");
-        return;
+        return;1
     }
     circularQueue.r = (circularQueue.r+1)%MAX;
     circularQueue.arr[circularQueue.r] = element;
@@ -41,7 +41,31 @@ void display(){
 }
 
 void main(){
-    circularQueue.f = -1;
-    circularQueue.r = -1;
-    //call functions here.
+    int choice;
+    int input;
+    while(1)
+    {   
+        printf("1:enque 2:deque 3:display : ");
+        scanf("%d",&choice);
+        switch (choice){
+
+        case 1:
+            printf("enter the number to enque : ");
+            scanf("%d",&input);
+            enque(input);
+            break; 
+        case 2:
+            deque();
+            break;
+        case 3:
+            display();
+            printf("\n");
+            break;
+
+        default:
+            printf("incorrect choice inputted\n");
+            break;
+        }
+    }
+    
 } 

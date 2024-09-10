@@ -16,8 +16,7 @@ void main(){
     }
     for(int j = 0;j<length;j++){
         if(arr[j] == element){
-            printf("index is : %d",j);
-            printf('\n');
+            printf("index is : %d\n",j);
         }
     }
 }

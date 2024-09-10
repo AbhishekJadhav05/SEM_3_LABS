@@ -19,7 +19,6 @@ void display(struct time time){
         printf("hour : %d \n",time.hour);
         printf("minute: %d \n",time.minute);
         printf("second : %d \n",time.second);
-        printf("\n");
 }
         
 struct time add(struct time* time1, struct time* time2) {

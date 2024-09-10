@@ -1,52 +1,59 @@
 #include<stdio.h>
-#define MAX 100
-#include<string.h>
 
-//ACCOUNT FOR HEXADECIMAL AND OCTAL
-struct stack{
-    int arr[MAX];
+// Define stack structure
+struct stack {
     int top;
-}stack;
+    int arr[50];
+} s;
 
-void push(int element){
-
-    if(stack.top==MAX-1)
-    {
-        printf("Stack overflow");
-        return;
-    }
-    stack.arr[++stack.top]=element;
-}
-int pop(){
-    if(stack.top == -1){
-        printf("Stack underflow");
-        return;
-    }
-    return stack.arr[stack.top--];
-
-}
-void display(){
-    if(stack.top == -1){
-        printf("Stack underflow");
-        return;
-    }
-    for(int i=stack.top;i>=0;i--){
-        printf("%d",stack.arr[i]);
+// Push function to push elements onto the stack
+void push(int ele) {
+    if (ele >= 10) {  // Handle hex conversion for digits A-F
+        s.arr[++s.top] = ele + 55; // 'A' = 65, so 10 -> 'A' is 10 + 55 = 65
+    } else {
+        s.arr[++s.top] = ele;  // Push digits directly for bases 2, 8, and <10 in base 16
     }
 }
 
-void main(){
-    stack.top = -1;
-    int number;
-    int n;
-    printf("enter a number : ");
-    scanf("%d",&number);
-    printf("enter a base : ");
-    scanf("%d",&n);
-
-    while(number >= 1){
-        push(number%n);
-        number = number/n;
+// Display function to print the stack content
+void display() {
+    for (int i = s.top; i >= 0; i--) {
+        if (s.arr[i] >= 65) {  // Handle display of hex characters A-F
+            printf("%c", s.arr[i]);
+        } else {
+            printf("%d", s.arr[i]);
+        }
     }
+    printf("\n");
+}
+
+void main() {
+    int dec, b, temp;
+
+    // Initialize stack
+    s.top = -1;
+
+    printf("Enter decimal number: ");
+    scanf("%d", &dec);
+
+    // Ask for the base and ensure it's 2, 8, or 16
+    printf("Enter base to convert to (2, 8, 16): ");
+    do {
+        scanf("%d", &b);
+        if (b == 2 || b == 8 || b == 16) {
+            break;
+        }
+        printf("Invalid input. Please enter 2, 8, or 16: ");
+    } while (1);
+
+    // Convert decimal to the required base
+    temp = dec;
+    while (temp > 0) {
+        push(temp % b);  // Push the remainder onto the stack
+        temp = temp / b;
+    }
+
+    // Display the converted number
+    printf("Converted number: ");
     display();
 }

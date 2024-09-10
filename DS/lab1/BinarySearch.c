@@ -4,38 +4,36 @@ void main(){
 
     int length = 0;
     int arr[50];
-    int element;
+    int element;    
     printf("enter the length of the array : ");
     scanf("%d",&length);
     printf("the element to be found : ");
     scanf("%d",&element);
-
+    printf("enter elements :\n"); 
     for(int i=0;i<length;i++){
-        printf("enter element %d : ",i);
+        
         scanf("%d",&arr[i]);
     }
     //binary search
     int start = 0;
     int end = length-1;
     int mid = (start+end)/2;
-    int check = 0;
-    while(start<end){
-        if(arr[mid] == element){
-            printf("index : %d",mid);
-            check = 1;
-            break;
+    int flag = 0;
+    while(start<=end){
+        if(arr[mid]<element){
+            start = mid+1;
         }
-        else if(arr[mid]>element){
-            end = mid-1;
+        else if(arr[mid] > element){
+            end = mid -1;
         }
         else{
-            start = mid+1;
+            printf("element found at index : %d",mid);
+            flag =1;
+            break;
         }
         mid = (start+end)/2;
     }
-    //check
-    if(check == 0){
-        printf("element not in array");
+    if(!flag){
+        printf("element not in the array");
     }
-
 }
