@@ -4,7 +4,7 @@ public class javaBoxing {
     public static void main(String[] args) {
         Integer i = 10;
         Short sh = 5;
-        Long l = 100000l;
+        Long l = 100000L;
         Double d = 10.0;
         Float f = 10.0f;
         Byte b = 0;

@@ -6,7 +6,7 @@ typedef struct node{
 }node;
 
 int length=0;
-node* start = NULL;
+node* head = NULL;
 
 node* createNode(int info){
     node* newNode = (node*)malloc(sizeof(node));
@@ -16,48 +16,32 @@ node* createNode(int info){
 }
 
 node* insert(int info){
-        if(start == NULL){
-            start = createNode(info);
+        if(head == NULL){
+            head = createNode(info);
+            printf("%d",*head);
             return;
         }
-        node* current = start;
+        node* current = head;
         while(current->next!= NULL){
             current = current->next;
         }
         current->next = createNode(info);
         length++;
 }
-node* insertAt(int info,int target,int pos){
-    if(start == NULL){
-        printf("empty list creating a node at position 0");
-        start = createNode(info);
-        return;
-    }
-    node* current = start;
-    node* temp = NULL;
-    if(pos = 1){
-        while(current->info !=target && current->->next !=NULL){
-        current=current->next;
-        temp = current ->->next;
-        }
-        node* newNode = createNode(info);
-        newNode->next = temp;
-        current->next = newNode;
-    }
-
-}
 void display(){
-    if(start == NULL){
+    if(head == NULL){
         printf("empty linked list\n");
         return;
     }
-    node* current = start;
+    node* current = head;
+    printf("elements of list : ");
     for(int i=0;i<=length;i++){
-        printf("%d\n",current->info);
+        printf("%d ",current->info);
         current = current->next;
     }
 }
 
 void main(){
-    display();
+    insert(2);
+
 }

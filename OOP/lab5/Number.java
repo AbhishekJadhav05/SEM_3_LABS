@@ -9,34 +9,19 @@ public class Number {
         this.value = value;
     }
     boolean isZero(){
-        if(this.value == 0){
-            return true;
-        }
-        return false;
+        return this.value == 0;
     }
     boolean isNegative(){
-        if(this.value < 0){
-            return true;
-        }
-        return false;
+        return this.value < 0;
     }
     boolean isPositive(){
-        if(this.value > 0){
-            return true;
-        }
-        return false;
+        return this.value > 0;
     }
     boolean isOdd(){
-        if(this.value %2 !=0){
-            return true;
-        }
-        return false;
+        return this.value % 2 != 0;
     }
     boolean isEven(){
-        if(this.value %2 ==0){
-            return true;
-        }
-        return false;
+        return this.value % 2 == 0;
     }
     boolean isPrime(){
         if(isNegative()){
@@ -60,20 +45,15 @@ public class Number {
             }  
             temp = (int)this.value;
             while((int)this.value>0){
-                arms += Math.pow(((int)this.value)%10,digits);
+                arms += (int) Math.pow(((int)this.value)%10,digits);
                 this.value = (int)this.value/10;
             }
-            if(arms == temp){
-                return true;
-            }
-            else{
-                return false;
-            }
+        return arms == temp;
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter a number : ");
-        Integer num = scanner.nextInt();
+        int num = scanner.nextInt();
         Number number = new Number(num);
         System.out.println("isZero isEven isOdd isPositive isNegative isPrime isArmstrong");
         System.out.println(number.isZero() +" "+

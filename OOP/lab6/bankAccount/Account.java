@@ -10,9 +10,8 @@ public class Account {
         this.accountNo = accountNo;
         this.balance = balance;
     }
-    double deposit(double amount){   
+    void deposit(double amount){
         this.balance += amount;
-        return balance;
     }
     void withdraw(double amount){
         if(amount > this.balance){

@@ -42,6 +42,7 @@ void main(){
         multiStack.top[i] = multiStack.boundary[i] = ((MAX/n)*i)-1;
 
     }
+    multiStack.boundary[n]=MAX;
     //call functions
 }
 

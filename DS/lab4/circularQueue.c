@@ -14,12 +14,12 @@ int length = 0;
 void enque(int element){
     if(length == MAX){    
        printf("queue overflow");
-        return;1
+        return 1;
     }
     circularQueue.r = (circularQueue.r+1)%MAX;
     circularQueue.arr[circularQueue.r] = element;
     length++;
-}
+} 
 
 int deque(){
     if(length == 0){

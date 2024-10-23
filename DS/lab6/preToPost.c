@@ -4,7 +4,7 @@
 
 struct stack
 {
-    char arr[100][100];
+    char arr[MAX][MAX];
     int top;
 } s;
 
