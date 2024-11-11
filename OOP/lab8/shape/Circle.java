@@ -1,15 +1,16 @@
 package lab8.shape;
 
-public class Circle extends Shape {
-    final double PI = 3.14;
-    @Override
-    public double rectangle(double length,double breath) {
-        throw new UnsupportedOperationException("Unimplemented method 'rectangle'");
+class Circle extends Shape {
+    double radius;
+
+    // Constructor to initialize radius
+    Circle(double radius) {
+        this.radius = radius;
     }
 
+    // Implement the area() method for circle
     @Override
-    public double circle(double radius) {
-        return PI*radius*radius;
+    double area() {
+        return Math.PI * radius * radius;
     }
-    
 }

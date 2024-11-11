@@ -1,15 +1,16 @@
 package lab8.shapeInterface;
 
-public class Circle implements Shape {
-    final double PI = 3.14;
-    @Override
-    public double rectangle(double length,double breath) {
-        throw new UnsupportedOperationException("Unimplemented method 'rectangle'");
+class Circle implements Shape {
+    double radius;
+
+    // Constructor to initialize radius
+    Circle(double radius) {
+        this.radius = radius;
     }
 
+    // Implement the area() method for circle
     @Override
-    public double circle(double radius) {
-        return PI*radius*radius;
+    public double area() {
+        return Math.PI * radius * radius;
     }
-    
 }

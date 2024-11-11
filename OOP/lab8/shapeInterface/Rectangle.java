@@ -1,14 +1,15 @@
 package lab8.shapeInterface;
 
-public class Rectangle implements Shape{
+class Rectangle implements Shape {
+    double length, width;
 
-    @Override
-    public double rectangle(double length, double breath) {
-        return length*breath;
+    // Constructor to initialize length and width
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
     }
-
     @Override
-    public double circle(double radius) {
-        throw new UnsupportedOperationException("Unimplemented method 'circle'");
+    public double area() {
+        return length * width;
     }
 }

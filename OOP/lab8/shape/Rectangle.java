@@ -1,14 +1,17 @@
 package lab8.shape;
 
-public class Rectangle extends Shape {
+class Rectangle extends Shape {
+    double length, width;
 
-    @Override
-    public double rectangle(double length, double breath) {
-        return length*breath;
+    // Constructor to initialize length and width
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
     }
 
+    // Implement the area() method for rectangle
     @Override
-    public double circle(double radius) {
-        throw new UnsupportedOperationException("Unimplemented method 'circle'");
+    double area() {
+        return length * width;
     }
 }

@@ -2,10 +2,12 @@ package lab8.shape;
 
 public class Main {
     public static void main(String[] args) {
-        Shape shape;
-        shape = new Rectangle();
-        System.out.println(shape.rectangle(5, 10));
-        shape = new Circle();
-        System.out.println(shape.circle(5));
+        // Create a rectangle object
+        Shape rectangle = new Rectangle(5, 3);
+        System.out.println("Area of the rectangle: " + rectangle.area());
+
+        // Create a circle object
+        Shape circle = new Circle(4);
+        System.out.println("Area of the circle: " + circle.area());
     }
 }
